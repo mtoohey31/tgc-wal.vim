@@ -1,196 +1,197 @@
 " wal.vim -- Vim color scheme.
-" Author:       Dylan Araps
-" Webpage:      https://github.com/dylanaraps/wal
-" Description:  A colorscheme that uses your terminal colors, made to work with 'wal'.
+" Original Author: Dylan Araps
+    " Updated By: Brandon Shockley
+" Webpage: httpg://github.com/dylanaraps/wal
+" Description: A colorscheme that uses your terminal colors, made to work with 'wal'.
+
+" This update allows wal.vim to work with termguicolors. 
 
 hi clear
 set background=dark
 
 if exists('syntax_on')
-    syntax reset
+syntax reset
 endif
 
 " Colorscheme name
-let g:colors_name = 'wal'
+let g:colors_name = 'wal-test'
 
-" highlight groups {{{
+source $HOME/.cache/wal/colors-wal.vim
 
-" set t_Co=16
-hi Normal ctermbg=NONE ctermfg=7
-hi NonText ctermbg=NONE ctermfg=0
-hi Comment ctermbg=NONE ctermfg=8
+let g:theTest=" . color1 . "
+
+" Do I need to set guixx=NONE ?
+
+execute "hi Normal ctermbg=NONE guifg=" . color7 ." ctermfg=7"
+execute "hi NonText ctermbg=NONE guifg=" . color0 . " ctermfg=0"
+execute "hi Comment ctermbg=NONE guifg=" . color8 . " ctermfg=8"
 hi Conceal ctermbg=NONE
-hi Constant ctermbg=NONE ctermfg=3
-hi Error ctermbg=1 ctermfg=7
-hi Identifier ctermbg=NONE ctermfg=1 cterm=BOLD
-hi Ignore ctermbg=8 ctermfg=0
-hi PreProc ctermbg=NONE ctermfg=3
-hi Special ctermbg=NONE ctermfg=6
-hi Statement ctermbg=NONE ctermfg=1
-hi String ctermbg=NONE ctermfg=2
-hi Number ctermbg=NONE ctermfg=3
-hi Todo ctermbg=2 ctermfg=0
-hi Type ctermbg=NONE ctermfg=3
-hi Underlined ctermbg=NONE ctermfg=1 cterm=underline
-hi StatusLine ctermbg=7 ctermfg=0
-hi StatusLineNC ctermbg=8 ctermfg=0
-hi TabLine ctermbg=NONE ctermfg=8
-hi TabLineFill ctermbg=NONE ctermfg=8
-hi TabLineSel ctermbg=4 ctermfg=0
-hi TermCursorNC ctermbg=3 ctermfg=0
-hi VertSplit ctermbg=8 ctermfg=0
-hi Title ctermbg=NONE ctermfg=4
-hi CursorLine ctermbg=2 ctermfg=0
-hi LineNr ctermbg=NONE ctermfg=8
-hi CursorLineNr ctermbg=NONE ctermfg=8
-hi helpLeadBlank ctermbg=NONE ctermfg=7
-hi helpNormal ctermbg=NONE ctermfg=7
-hi Visual ctermbg=0 ctermfg=15 cterm=reverse term=reverse
-hi VisualNOS ctermbg=NONE ctermfg=1
-hi Pmenu ctermbg=8 ctermfg=7
-hi PmenuSbar ctermbg=6 ctermfg=7
-hi PmenuSel ctermbg=4 ctermfg=0
-hi PmenuThumb ctermbg=8 ctermfg=8
-hi FoldColumn ctermbg=NONE ctermfg=7
-hi Folded ctermbg=NONE ctermfg=8
-hi WildMenu ctermbg=2 ctermfg=0
-hi SpecialKey ctermbg=NONE ctermfg=8
-hi DiffAdd ctermbg=NONE ctermfg=2
-hi DiffChange ctermbg=NONE ctermfg=8
-hi DiffDelete ctermbg=NONE ctermfg=1
-hi DiffText ctermbg=NONE ctermfg=4
-hi IncSearch ctermbg=3 ctermfg=0
-hi Search ctermbg=3 ctermfg=0
-hi Directory ctermbg=NONE ctermfg=4
-hi MatchParen ctermbg=1 ctermfg=8
-hi ColorColumn ctermbg=4 ctermfg=0
-hi signColumn ctermbg=NONE ctermfg=4
-hi ErrorMsg ctermbg=NONE ctermfg=8
-hi ModeMsg ctermbg=NONE ctermfg=2
-hi MoreMsg ctermbg=NONE ctermfg=2
-hi Question ctermbg=NONE ctermfg=4
-hi WarningMsg ctermbg=1 ctermfg=0
-hi Cursor ctermbg=NONE ctermfg=8
-hi Structure ctermbg=NONE ctermfg=5
-hi CursorColumn ctermbg=8 ctermfg=7
-hi ModeMsg ctermbg=NONE ctermfg=7
-hi SpellBad ctermbg=NONE ctermfg=1 cterm=underline
-hi SpellCap ctermbg=NONE ctermfg=4 cterm=underline
-hi SpellLocal ctermbg=NONE ctermfg=5 cterm=underline
-hi SpellRare ctermbg=NONE ctermfg=6 cterm=underline
-hi Boolean ctermbg=NONE ctermfg=5
-hi Character ctermbg=NONE ctermfg=1
-hi Conditional ctermbg=NONE ctermfg=5
-hi Define ctermbg=NONE ctermfg=5
-hi Delimiter ctermbg=NONE ctermfg=5
-hi Float ctermbg=NONE ctermfg=5
-hi Include ctermbg=NONE ctermfg=4
-hi Keyword ctermbg=NONE ctermfg=5
-hi Label ctermbg=NONE ctermfg=3
-hi Operator ctermbg=NONE ctermfg=7
-hi Repeat ctermbg=NONE ctermfg=3
-hi SpecialChar ctermbg=NONE ctermfg=5
-hi Tag ctermbg=NONE ctermfg=3
-hi Typedef ctermbg=NONE ctermfg=3
-hi vimUserCommand ctermbg=NONE ctermfg=1 cterm=BOLD
-    hi link vimMap vimUserCommand
-    hi link vimLet vimUserCommand
-    hi link vimCommand vimUserCommand
-    hi link vimFTCmd vimUserCommand
-    hi link vimAutoCmd vimUserCommand
-    hi link vimNotFunc vimUserCommand
-hi vimNotation ctermbg=NONE ctermfg=4
-hi vimMapModKey ctermbg=NONE ctermfg=4
-hi vimBracket ctermbg=NONE ctermfg=7
-hi vimCommentString ctermbg=NONE ctermfg=8
-hi htmlLink ctermbg=NONE ctermfg=1 cterm=underline
-hi htmlBold ctermbg=NONE ctermfg=3 cterm=BOLD
-hi htmlItalic ctermbg=NONE ctermfg=5
-hi htmlEndTag ctermbg=NONE ctermfg=7
-hi htmlTag ctermbg=NONE ctermfg=7
-hi htmlTagName ctermbg=NONE ctermfg=1 cterm=BOLD
-hi htmlH1 ctermbg=NONE ctermfg=7
-    hi link htmlH2 htmlH1
-    hi link htmlH3 htmlH1
-    hi link htmlH4 htmlH1
-    hi link htmlH5 htmlH1
-    hi link htmlH6 htmlH1
-hi cssMultiColumnAttr ctermbg=NONE ctermfg=2
-    hi link cssFontAttr cssMultiColumnAttr
-    hi link cssFlexibleBoxAttr cssMultiColumnAttr
-hi cssBraces ctermbg=NONE ctermfg=7
-    hi link cssAttrComma cssBraces
-hi cssValueLength ctermbg=NONE ctermfg=7
-hi cssUnitDecorators ctermbg=NONE ctermfg=7
-hi cssValueNumber ctermbg=NONE ctermfg=7
-    hi link cssValueLength cssValueNumber
-hi cssNoise ctermbg=NONE ctermfg=8
-hi cssTagName ctermbg=NONE ctermfg=1
-hi cssFunctionName ctermbg=NONE ctermfg=4
-hi scssSelectorChar ctermbg=NONE ctermfg=7
-hi scssAttribute ctermbg=NONE ctermfg=7
-    hi link scssDefinition cssNoise
-hi sassidChar ctermbg=NONE ctermfg=1
-hi sassClassChar ctermbg=NONE ctermfg=5
-hi sassInclude ctermbg=NONE ctermfg=5
-hi sassMixing ctermbg=NONE ctermfg=5
-hi sassMixinName ctermbg=NONE ctermfg=4
-hi javaScript ctermbg=NONE ctermfg=7
-hi javaScriptBraces ctermbg=NONE ctermfg=7
-hi javaScriptNumber ctermbg=NONE ctermfg=5
-hi markdownH1 ctermbg=NONE ctermfg=7
-    hi link markdownH2 markdownH1
-    hi link markdownH3 markdownH1
-    hi link markdownH4 markdownH1
-    hi link markdownH5 markdownH1
-    hi link markdownH6 markdownH1
-hi markdownAutomaticLink ctermbg=NONE ctermfg=2 cterm=underline
-    hi link markdownUrl markdownAutomaticLink
-hi markdownError ctermbg=NONE ctermfg=7
-hi markdownCode ctermbg=NONE ctermfg=3
-hi markdownCodeBlock ctermbg=NONE ctermfg=3
-hi markdownCodeDelimiter ctermbg=NONE ctermfg=5
-hi markdownItalic cterm=Italic
-hi markdownBold cterm=Bold
-hi xdefaultsValue ctermbg=NONE ctermfg=7
-hi rubyInclude ctermbg=NONE ctermfg=4
-hi rubyDefine ctermbg=NONE ctermfg=5
-hi rubyFunction ctermbg=NONE ctermfg=4
-hi rubyStringDelimiter ctermbg=NONE ctermfg=2
-hi rubyInteger ctermbg=NONE ctermfg=3
-hi rubyAttribute ctermbg=NONE ctermfg=4
-hi rubyConstant ctermbg=NONE ctermfg=3
-hi rubyInterpolation ctermbg=NONE ctermfg=2
-hi rubyInterpolationDelimiter ctermbg=NONE ctermfg=3
-hi rubyRegexp ctermbg=NONE ctermfg=6
-hi rubySymbol ctermbg=NONE ctermfg=2
-hi rubyTodo ctermbg=NONE ctermfg=8
-hi rubyRegexpAnchor ctermbg=NONE ctermfg=7
-    hi link rubyRegexpQuantifier rubyRegexpAnchor
-hi pythonOperator ctermbg=NONE ctermfg=5
-hi pythonFunction ctermbg=NONE ctermfg=4
-hi pythonRepeat ctermbg=NONE ctermfg=5
-hi pythonStatement ctermbg=NONE ctermfg=1 cterm=Bold
-hi pythonBuiltIn ctermbg=NONE ctermfg=4
-hi phpMemberSelector ctermbg=NONE ctermfg=7
-hi phpComparison ctermbg=NONE ctermfg=7
-hi phpParent ctermbg=NONE ctermfg=7
-hi cOperator ctermbg=NONE ctermfg=6
-hi cPreCondit ctermbg=NONE ctermfg=5
-hi SignifySignAdd ctermbg=NONE ctermfg=2
-hi SignifySignChange ctermbg=NONE ctermfg=4
-hi SignifySignDelete ctermbg=NONE ctermfg=1
-hi NERDTreeDirSlash ctermbg=NONE ctermfg=4
-hi NERDTreeExecFile ctermbg=NONE ctermfg=7
-hi ALEErrorSign ctermbg=NONE ctermfg=1
-hi ALEWarningSign ctermbg=NONE ctermfg=3
-hi ALEError ctermbg=NONE ctermfg=1
-hi ALEWarning ctermbg=NONE ctermfg=3
+execute "hi Constant ctermbg=NONE guifg=" . color3 . "ctermfg=3"
+execute "hi Error guibg=" . color1 . " ctermbg=1 guifg=" . color7 . " ctermfg=7"
+execute "hi Identifier ctermbg=NONE guifg=" . color1 . " ctermfg=1 gui=BOLD cterm=BOLD"
+execute "hi Ignore guibg=" . color8 . " ctermbg=8 guifg=" . color0 . " ctermfg=0"
+execute "hi PreProc ctermbg=NONE guifg=" . color3 . " ctermfg=3"
+execute "hi Special ctermbg=NONE guifg=" . color6 . " ctermfg=6"
+execute "hi Statement ctermbg=NONE guifg=" . color1 . " ctermfg=1"
+execute "hi String ctermbg=NONE guifg=" . color2 . " ctermfg=2"
+execute "hi Number ctermbg=NONE guifg=" . color3 . " ctermfg=3"
+execute "hi Todo guibg=" . color2 . " ctermbg=2 guifg=" . color0 . " ctermfg=0"
+execute "hi Type ctermbg=NONE guifg=" . color3 . " ctermfg=3"
+execute "hi Underlined ctermbg=NONE guifg=" . color1 . " ctermfg=1 gui=underline cterm=underline"
+execute "hi StatusLine guibg=" . color7 . " ctermbg=7 guifg=" . color0 . " ctermfg=0"
+execute "hi StatusLineNC guibg=" . color8 . " ctermbg=8 guifg=" . color0 . " ctermfg=0"
+execute "hi TabLine ctermbg=NONE guifg=" . color8 . " ctermfg=8"
+execute "hi TabLineFill ctermbg=NONE guifg=" . color8 . " ctermfg=8"
+execute "hi TabLineSel guibg=" . color4 . " ctermbg=4 guifg=" . color0 . " ctermfg=0"
+execute "hi TermCursorNC guibg=" . color3 . " ctermbg=3 guifg=" . color0 . " ctermfg=0"
+execute "hi VertSplit guibg=" . color8 . " ctermbg=8 guifg=" . color0 . " ctermfg=0"
+execute "hi Title ctermbg=NONE guifg=" . color4 . " ctermfg=4"
+execute "hi CursorLine guibg=" . color2 . " ctermbg=2 guifg=" . color0 . " ctermfg=0"
+execute "hi LineNr ctermbg=NONE guifg=" . color8 . " ctermfg=8"
+execute "hi CursorLineNr ctermbg=NONE guifg=" . color8 . " ctermfg=8"
+execute "hi helpLeadBlank ctermbg=NONE guifg=" . color7 . " ctermfg=7"
+execute "hi helpNormal ctermbg=NONE guifg=" . color7 . " ctermfg=7"
+execute "hi Visual guibg=" . color0 . " ctermbg=0 guifg=" . color1 . " ctermfg=15 gui=reverse cterm=reverse term=reverse"
+execute "hi VisualNOS ctermbg=NONE guifg=" . color1 . " ctermfg=1"
+execute "hi Pmenu guibg=" . color8 . " ctermbg=8 guifg=" . color7 . " ctermfg=7"
+execute "hi PmenuSbar guibg=" . color6 . " ctermbg=6 guifg=" . color7 . " ctermfg=7"
+execute "hi PmenuSel guibg=" . color4 . " ctermbg=4 guifg=" . color0 . " ctermfg=0"
+execute "hi PmenuThumb guibg=" . color8 . " ctermbg=8 guifg=" . color8 . " ctermfg=8"
+execute "hi FoldColumn ctermbg=NONE guifg=" . color7 . " ctermfg=7"
+execute "hi Folded ctermbg=NONE guifg=" . color8 . " ctermfg=8"
+execute "hi WildMenu guibg=" . color2 . " ctermbg=2 guifg=" . color0 . " ctermfg=0"
+execute "hi SpecialKey ctermbg=NONE guifg=" . color8 . " ctermfg=8"
+execute "hi DiffAdd ctermbg=NONE guifg=" . color2 . " ctermfg=2"
+execute "hi DiffChange ctermbg=NONE guifg=" . color8 . " ctermfg=8"
+execute "hi DiffDelete ctermbg=NONE guifg=" . color1 . " ctermfg=1"
+execute "hi DiffText ctermbg=NONE guifg=" . color4 . " ctermfg=4"
+execute "hi IncSearch guibg=" . color3 . " ctermbg=3 guifg=" . color0 . " ctermfg=0"
+execute "hi Search guibg=" . color3 . " ctermbg=3 guifg=" . color0 . " ctermfg=0"
+execute "hi Directory ctermbg=NONE guifg=" . color4 . " ctermfg=4"
+execute "hi MatchParen guibg=" . color1 . " ctermbg=1 guifg=" . color8 . " ctermfg=8"
+execute "hi ColorColumn guibg=" . color4 . " ctermbg=4 guifg=" . color0 . " ctermfg=0"
+execute "hi signColumn ctermbg=NONE guifg=" . color4 . " ctermfg=4"
+execute "hi ErrorMsg ctermbg=NONE guifg=" . color8 . " ctermfg=8"
+execute "hi ModeMsg ctermbg=NONE guifg=" . color2 . " ctermfg=2"
+execute "hi MoreMsg ctermbg=NONE guifg=" . color2 . " ctermfg=2"
+execute "hi Question ctermbg=NONE guifg=" . color4 . " ctermfg=4"
+execute "hi WarningMsg guibg=" . color1 . " ctermbg=1 guifg=" . color0 . " ctermfg=0"
+execute "hi Cursor ctermbg=NONE guifg=" . color8 . " ctermfg=8"
+execute "hi Structure ctermbg=NONE guifg=" . color5 . " ctermfg=5"
+execute "hi CursorColumn guibg=" . color8 . " ctermbg=8 guifg=" . color7 . " ctermfg=7"
+execute "hi ModeMsg ctermbg=NONE guifg=" . color7 . " ctermfg=7"
+execute "hi SpellBad ctermbg=NONE guifg=" . color1 . " ctermfg=1 gui=underline cterm=underline"
+execute "hi SpellCap ctermbg=NONE guifg=" . color4 . " ctermfg=4 gui=underline cterm=underline"
+execute "hi SpellLocal ctermbg=NONE guifg=" . color5 . " ctermfg=5 gui=underline cterm=underline"
+execute "hi SpellRare ctermbg=NONE guifg=" . color6 . " ctermfg=6 gui=underline cterm=underline"
+execute "hi Boolean ctermbg=NONE guifg=" . color5 . " ctermfg=5"
+execute "hi Character ctermbg=NONE guifg=" . color1 . " ctermfg=1"
+execute "hi Conditional ctermbg=NONE guifg=" . color5 . " ctermfg=5"
+execute "hi Define ctermbg=NONE guifg=" . color5 . " ctermfg=5"
+execute "hi Delimiter ctermbg=NONE guifg=" . color5 . " ctermfg=5"
+execute "hi Float ctermbg=NONE guifg=" . color5 . " ctermfg=5"
+execute "hi Include ctermbg=NONE guifg=" . color4 . " ctermfg=4"
+execute "hi Keyword ctermbg=NONE guifg=" . color5 . " ctermfg=5"
+execute "hi Label ctermbg=NONE guifg=" . color3 . " ctermfg=3"
+execute "hi Operator ctermbg=NONE guifg=" . color7 . " ctermfg=7"
+execute "hi Repeat ctermbg=NONE guifg=" . color3 . " ctermfg=3"
+execute "hi SpecialChar ctermbg=NONE guifg=" . color5 . " ctermfg=5"
+execute "hi Tag ctermbg=NONE guifg=" . color3 . " ctermfg=3"
+execute "hi Typedef ctermbg=NONE guifg=" . color3 . " ctermfg=3"
+execute "hi vimUserCommand ctermbg=NONE guifg=" . color1 . " ctermfg=1 gui=BOLD cterm=BOLD"
+hi link vimMap vimUserCommand
+hi link vimLet vimUserCommand
+hi link vimCommand vimUserCommand
+hi link vimFTCmd vimUserCommand
+hi link vimAutoCmd vimUserCommand
+hi link vimNotFunc vimUserCommand
+execute "hi vimNotation ctermbg=NONE guifg=" . color4 . " ctermfg=4"
+execute "hi vimMapModKey ctermbg=NONE guifg=" . color4 . " ctermfg=4"
+execute "hi vimBracket ctermbg=NONE guifg=" . color7 . " ctermfg=7"
+execute "hi vimCommentString ctermbg=NONE guifg=" . color8 . " ctermfg=8"
+execute "hi htmlLink ctermbg=NONE guifg=" . color1 . " ctermfg=1 gui=underline cterm=underline"
+execute "hi htmlBold ctermbg=NONE guifg=" . color3 . " ctermfg=3 gui=BOLD cterm=BOLD"
+execute "hi htmlItalic ctermbg=NONE guifg=" . color5 . " ctermfg=5"
+execute "hi htmlEndTag ctermbg=NONE guifg=" . color7 . " ctermfg=7"
+execute "hi htmlTag ctermbg=NONE guifg=" . color7 . " ctermfg=7"
+execute "hi htmlTagName ctermbg=NONE guifg=" . color1 . " ctermfg=1 gui=BOLD cterm=BOLD"
+execute "hi htmlH1 ctermbg=NONE guifg=" . color7 . " ctermfg=7"
+hi link htmlH2 htmlH1
+hi link htmlH3 htmlH1
+hi link htmlH4 htmlH1
+hi link htmlH5 htmlH1
+hi link htmlH6 htmlH1
+execute "hi cssMultiColumnAttr ctermbg=NONE guifg=" . color2 . " ctermfg=2"
+hi link cssFontAttr cssMultiColumnAttr
+hi link cssFlexibleBoxAttr cssMultiColumnAttr
+execute "hi cssBraces ctermbg=NONE guifg=" . color7 . " ctermfg=7"
+hi link cssAttrComma cssBraces
+execute "hi cssValueLength ctermbg=NONE guifg=" . color7 . " ctermfg=7"
+execute "hi cssUnitDecorators ctermbg=NONE guifg=" . color7 . " ctermfg=7"
+execute "hi cssValueNumber ctermbg=NONE guifg=" . color7 . " ctermfg=7"
+hi link cssValueLength cssValueNumber
+execute "hi cssNoise ctermbg=NONE guifg=" . color8 . " ctermfg=8"
+execute "hi cssTagName ctermbg=NONE guifg=" . color1 . " ctermfg=1"
+execute "hi cssFunctionName ctermbg=NONE guifg=" . color4 . " ctermfg=4"
+execute "hi scssSelectorChar ctermbg=NONE guifg=" . color7 . " ctermfg=7"
+execute "hi scssAttribute ctermbg=NONE guifg=" . color7 . " ctermfg=7"
+hi link scssDefinition cssNoise
+execute "hi sassidChar ctermbg=NONE guifg=" . color1 . " ctermfg=1"
+execute "hi sassClassChar ctermbg=NONE guifg=" . color5 . " ctermfg=5"
+execute "hi sassInclude ctermbg=NONE guifg=" . color5 . " ctermfg=5"
+execute "hi sassMixing ctermbg=NONE guifg=" . color5 . " ctermfg=5"
+execute "hi sassMixinName ctermbg=NONE guifg=" . color4 . " ctermfg=4"
+execute "hi javaScript ctermbg=NONE guifg=" . color7 . " ctermfg=7"
+execute "hi javaScriptBraces ctermbg=NONE guifg=" . color7 . " ctermfg=7"
+execute "hi javaScriptNumber ctermbg=NONE guifg=" . color5 . " ctermfg=5"
+execute "hi markdownH1 ctermbg=NONE guifg=" . color7 . " ctermfg=7"
+hi link markdownH2 markdownH1
+hi link markdownH3 markdownH1
+hi link markdownH4 markdownH1
+hi link markdownH5 markdownH1
+hi link markdownH6 markdownH1
+execute "hi markdownAutomaticLink ctermbg=NONE guifg=" . color2 . " ctermfg=2 gui=underline cterm=underline"
+hi link markdownUrl markdownAutomaticLink
+execute "hi markdownError ctermbg=NONE guifg=" . color7 . " ctermfg=7"
+execute "hi markdownCode ctermbg=NONE guifg=" . color3 . " ctermfg=3"
+execute "hi markdownCodeBlock ctermbg=NONE guifg=" . color3 . " ctermfg=3"
+execute "hi markdownCodeDelimiter ctermbg=NONE guifg=" . color5 . " ctermfg=5"
+hi markdownItalic gui=Italic cterm=Italic
+hi markdownBold gui=Bold cterm=Bold
+execute "hi xdefaultsValue ctermbg=NONE guifg=" . color7 . " ctermfg=7"
+execute "hi rubyInclude ctermbg=NONE guifg=" . color4 . " ctermfg=4"
+execute "hi rubyDefine ctermbg=NONE guifg=" . color5 . " ctermfg=5"
+execute "hi rubyFunction ctermbg=NONE guifg=" . color4 . " ctermfg=4"
+execute "hi rubyStringDelimiter ctermbg=NONE guifg=" . color2 . " ctermfg=2"
+execute "hi rubyInteger ctermbg=NONE guifg=" . color3 . " ctermfg=3"
+execute "hi rubyAttribute ctermbg=NONE guifg=" . color4 . " ctermfg=4"
+execute "hi rubyConstant ctermbg=NONE guifg=" . color3 . " ctermfg=3"
+execute "hi rubyInterpolation ctermbg=NONE guifg=" . color2 . " ctermfg=2"
+execute "hi rubyInterpolationDelimiter ctermbg=NONE guifg=" . color3 . " ctermfg=3"
+execute "hi rubyRegexp ctermbg=NONE guifg=" . color6 . " ctermfg=6"
+execute "hi rubySymbol ctermbg=NONE guifg=" . color2 . " ctermfg=2"
+execute "hi rubyTodo ctermbg=NONE guifg=" . color8 . " ctermfg=8"
+execute "hi rubyRegexpAnchor ctermbg=NONE guifg=" . color7 . " ctermfg=7"
+hi link rubyRegexpQuantifier rubyRegexpAnchor
+execute "hi pythonOperator ctermbg=NONE guifg=" . color5 . " ctermfg=5"
+execute "hi pythonFunction ctermbg=NONE guifg=" . color4 . " ctermfg=4"
+execute "hi pythonRepeat ctermbg=NONE guifg=" . color5 . " ctermfg=5"
+execute "hi pythonStatement ctermbg=NONE guifg=" . color1 . " ctermfg=1 gui=Bold cterm=Bold"
+execute "hi pythonBuiltIn ctermbg=NONE guifg=" . color4 . " ctermfg=4"
+execute "hi phpMemberSelector ctermbg=NONE guifg=" . color7 . " ctermfg=7"
+execute "hi phpComparison ctermbg=NONE guifg=" . color7 . " ctermfg=7"
+execute "hi phpParent ctermbg=NONE guifg=" . color7 . " ctermfg=7"
+execute "hi cOperator ctermbg=NONE guifg=" . color6 . " ctermfg=6"
+execute "hi cPreCondit ctermbg=NONE guifg=" . color5 . " ctermfg=5"
+execute "hi SignifySignAdd ctermbg=NONE guifg=" . color2 . " ctermfg=2"
+execute "hi SignifySignChange ctermbg=NONE guifg=" . color4 . " ctermfg=4"
+execute "hi SignifySignDelete ctermbg=NONE guifg=" . color1 . " ctermfg=1"
+execute "hi NERDTreeDirSlash ctermbg=NONE guifg=" . color4 . " ctermfg=4"
+execute "hi NERDTreeExecFile ctermbg=NONE guifg=" . color7 . " ctermfg=7"
+execute "hi ALEErrorSign ctermbg=NONE guifg=" . color1 . " ctermfg=1"
+execute "hi ALEWarningSign ctermbg=NONE guifg=" . color3 . " ctermfg=3"
+execute "hi ALEError ctermbg=NONE guifg=" . color1 . " ctermfg=1"
+execute "hi ALEWarning ctermbg=NONE guifg=" . color3 . " ctermfg=3"
 
-" }}}
-
-" Plugin options {{{
-
-let g:limelight_conceal_ctermfg = 8
-
-" }}}
+" Plugins
+" let g:limelight_conceal_ctermfg = {color8}
