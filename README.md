@@ -12,5 +12,5 @@ A vim colorscheme for use with **[pywal](https://github.com/dylanaraps/pywal)**.
 " Using plug
 Plug 'typkkrft/wal.vim'
 
-colorscheme wal
+colorscheme gupywal
 ```
