@@ -197,5 +197,6 @@ execute "hi ALEWarningSign ctermbg=NONE guifg=" . color3 . " ctermfg=3"
 execute "hi ALEError ctermbg=NONE guifg=" . color1 . " ctermfg=1"
 execute "hi ALEWarning ctermbg=NONE guifg=" . color3 . " ctermfg=3"
 
-" Plugins TODO
-" let g:limelight_conceal_ctermfg = {color8}
+" Plugins 
+let g:limelight_conceal_ctermfg=8
+execute "let g:limelight_conceal_guifg=" . color8
