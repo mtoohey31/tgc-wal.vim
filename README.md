@@ -1,4 +1,5 @@
 # wal.vim
+## Updated to support termguicolors
 
 [![MIT licensed](https://img.shields.io/badge/license-MIT-blue.svg)](./LICENSE.md)
 
@@ -9,7 +10,7 @@ A vim colorscheme for use with **[pywal](https://github.com/dylanaraps/pywal)**.
 
 ```vim
 " Using plug
-Plug 'dylanaraps/wal.vim'
+Plug 'typkkrft/wal.vim'
 
 colorscheme wal
 ```
