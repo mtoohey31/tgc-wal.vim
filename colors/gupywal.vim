@@ -199,4 +199,4 @@ execute "hi ALEWarning ctermbg=NONE guifg=" . color3 . " ctermfg=3"
 
 " Plugins 
 let g:limelight_conceal_ctermfg=8
-let g:limelight_conceal_guifg= . color8
+let g:limelight_conceal_guifg=color8
