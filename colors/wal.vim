@@ -6,6 +6,12 @@
 
 " This update allows wal.vim to work with termguicolors. 
 
+" TODO:
+    " - [ ] Test on other terminals 
+    " - [ ] Test without termguicolors
+    " - [ ] Setup Plugins where possible
+    " - [ ] Comment and clean up script
+
 hi clear
 set background=dark
 
@@ -14,11 +20,9 @@ syntax reset
 endif
 
 " Colorscheme name
-let g:colors_name = 'wal-test'
+let g:colors_name = 'guPywal'
 
 source $HOME/.cache/wal/colors-wal.vim
-
-let g:theTest=" . color1 . "
 
 " Do I need to set guixx=NONE ?
 
@@ -193,5 +197,5 @@ execute "hi ALEWarningSign ctermbg=NONE guifg=" . color3 . " ctermfg=3"
 execute "hi ALEError ctermbg=NONE guifg=" . color1 . " ctermfg=1"
 execute "hi ALEWarning ctermbg=NONE guifg=" . color3 . " ctermfg=3"
 
-" Plugins
+" Plugins TODO
 " let g:limelight_conceal_ctermfg = {color8}
