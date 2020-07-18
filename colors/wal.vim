@@ -20,7 +20,7 @@ syntax reset
 endif
 
 " Colorscheme name
-let g:colors_name = 'guPywal'
+let g:colors_name = 'gupywal'
 
 source $HOME/.cache/wal/colors-wal.vim
 
