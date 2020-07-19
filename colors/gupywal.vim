@@ -29,6 +29,7 @@ source $HOME/.cache/wal/colors-wal.vim
 execute "hi Normal ctermbg=NONE guifg=" . color7 ." ctermfg=7"
 execute "hi NonText ctermbg=NONE guifg=" . color0 . " ctermfg=0"
 execute "hi Comment ctermbg=NONE guifg=" . color8 . " ctermfg=8"
+
 hi Conceal ctermbg=NONE
 execute "hi Constant ctermbg=NONE guifg=" . color3 . "ctermfg=3"
 execute "hi Error guibg=" . color1 . " ctermbg=1 guifg=" . color7 . " ctermfg=7"
@@ -42,17 +43,22 @@ execute "hi Number ctermbg=NONE guifg=" . color3 . " ctermfg=3"
 execute "hi Todo guibg=" . color2 . " ctermbg=2 guifg=" . color0 . " ctermfg=0"
 execute "hi Type ctermbg=NONE guifg=" . color3 . " ctermfg=3"
 execute "hi Underlined ctermbg=NONE guifg=" . color1 . " ctermfg=1 gui=underline cterm=underline"
+
 execute "hi StatusLine guibg=" . color7 . " ctermbg=7 guifg=" . color0 . " ctermfg=0"
 execute "hi StatusLineNC guibg=" . color8 . " ctermbg=8 guifg=" . color0 . " ctermfg=0"
+
 execute "hi TabLine ctermbg=NONE guifg=" . color8 . " ctermfg=8"
 execute "hi TabLineFill ctermbg=NONE guifg=" . color8 . " ctermfg=8"
 execute "hi TabLineSel guibg=" . color4 . " ctermbg=4 guifg=" . color0 . " ctermfg=0"
+
 execute "hi TermCursorNC guibg=" . color3 . " ctermbg=3 guifg=" . color0 . " ctermfg=0"
 execute "hi VertSplit guibg=" . color8 . " ctermbg=8 guifg=" . color0 . " ctermfg=0"
 execute "hi Title ctermbg=NONE guifg=" . color4 . " ctermfg=4"
+
 execute "hi CursorLine guibg=" . color2 . " ctermbg=2 guifg=" . color0 . " ctermfg=0"
 execute "hi LineNr ctermbg=NONE guifg=" . color8 . " ctermfg=8"
 execute "hi CursorLineNr ctermbg=NONE guifg=" . color8 . " ctermfg=8"
+
 execute "hi helpLeadBlank ctermbg=NONE guifg=" . color7 . " ctermfg=7"
 execute "hi helpNormal ctermbg=NONE guifg=" . color7 . " ctermfg=7"
 execute "hi Visual guibg=" . color0 . " ctermbg=0 guifg=" . color1 . " ctermfg=15 gui=reverse cterm=reverse term=reverse"
@@ -113,6 +119,7 @@ execute "hi vimNotation ctermbg=NONE guifg=" . color4 . " ctermfg=4"
 execute "hi vimMapModKey ctermbg=NONE guifg=" . color4 . " ctermfg=4"
 execute "hi vimBracket ctermbg=NONE guifg=" . color7 . " ctermfg=7"
 execute "hi vimCommentString ctermbg=NONE guifg=" . color8 . " ctermfg=8"
+
 execute "hi htmlLink ctermbg=NONE guifg=" . color1 . " ctermfg=1 gui=underline cterm=underline"
 execute "hi htmlBold ctermbg=NONE guifg=" . color3 . " ctermfg=3 gui=BOLD cterm=BOLD"
 execute "hi htmlItalic ctermbg=NONE guifg=" . color5 . " ctermfg=5"
@@ -120,11 +127,13 @@ execute "hi htmlEndTag ctermbg=NONE guifg=" . color7 . " ctermfg=7"
 execute "hi htmlTag ctermbg=NONE guifg=" . color7 . " ctermfg=7"
 execute "hi htmlTagName ctermbg=NONE guifg=" . color1 . " ctermfg=1 gui=BOLD cterm=BOLD"
 execute "hi htmlH1 ctermbg=NONE guifg=" . color7 . " ctermfg=7"
+
 hi link htmlH2 htmlH1
 hi link htmlH3 htmlH1
 hi link htmlH4 htmlH1
 hi link htmlH5 htmlH1
 hi link htmlH6 htmlH1
+
 execute "hi cssMultiColumnAttr ctermbg=NONE guifg=" . color2 . " ctermfg=2"
 hi link cssFontAttr cssMultiColumnAttr
 hi link cssFlexibleBoxAttr cssMultiColumnAttr
@@ -137,6 +146,7 @@ hi link cssValueLength cssValueNumber
 execute "hi cssNoise ctermbg=NONE guifg=" . color8 . " ctermfg=8"
 execute "hi cssTagName ctermbg=NONE guifg=" . color1 . " ctermfg=1"
 execute "hi cssFunctionName ctermbg=NONE guifg=" . color4 . " ctermfg=4"
+
 execute "hi scssSelectorChar ctermbg=NONE guifg=" . color7 . " ctermfg=7"
 execute "hi scssAttribute ctermbg=NONE guifg=" . color7 . " ctermfg=7"
 hi link scssDefinition cssNoise
@@ -145,9 +155,11 @@ execute "hi sassClassChar ctermbg=NONE guifg=" . color5 . " ctermfg=5"
 execute "hi sassInclude ctermbg=NONE guifg=" . color5 . " ctermfg=5"
 execute "hi sassMixing ctermbg=NONE guifg=" . color5 . " ctermfg=5"
 execute "hi sassMixinName ctermbg=NONE guifg=" . color4 . " ctermfg=4"
+
 execute "hi javaScript ctermbg=NONE guifg=" . color7 . " ctermfg=7"
 execute "hi javaScriptBraces ctermbg=NONE guifg=" . color7 . " ctermfg=7"
 execute "hi javaScriptNumber ctermbg=NONE guifg=" . color5 . " ctermfg=5"
+
 execute "hi markdownH1 ctermbg=NONE guifg=" . color7 . " ctermfg=7"
 hi link markdownH2 markdownH1
 hi link markdownH3 markdownH1
@@ -162,7 +174,9 @@ execute "hi markdownCodeBlock ctermbg=NONE guifg=" . color3 . " ctermfg=3"
 execute "hi markdownCodeDelimiter ctermbg=NONE guifg=" . color5 . " ctermfg=5"
 hi markdownItalic gui=Italic cterm=Italic
 hi markdownBold gui=Bold cterm=Bold
+
 execute "hi xdefaultsValue ctermbg=NONE guifg=" . color7 . " ctermfg=7"
+
 execute "hi rubyInclude ctermbg=NONE guifg=" . color4 . " ctermfg=4"
 execute "hi rubyDefine ctermbg=NONE guifg=" . color5 . " ctermfg=5"
 execute "hi rubyFunction ctermbg=NONE guifg=" . color4 . " ctermfg=4"
@@ -177,26 +191,40 @@ execute "hi rubySymbol ctermbg=NONE guifg=" . color2 . " ctermfg=2"
 execute "hi rubyTodo ctermbg=NONE guifg=" . color8 . " ctermfg=8"
 execute "hi rubyRegexpAnchor ctermbg=NONE guifg=" . color7 . " ctermfg=7"
 hi link rubyRegexpQuantifier rubyRegexpAnchor
+
 execute "hi pythonOperator ctermbg=NONE guifg=" . color5 . " ctermfg=5"
 execute "hi pythonFunction ctermbg=NONE guifg=" . color4 . " ctermfg=4"
 execute "hi pythonRepeat ctermbg=NONE guifg=" . color5 . " ctermfg=5"
 execute "hi pythonStatement ctermbg=NONE guifg=" . color1 . " ctermfg=1 gui=Bold cterm=Bold"
 execute "hi pythonBuiltIn ctermbg=NONE guifg=" . color4 . " ctermfg=4"
+
 execute "hi phpMemberSelector ctermbg=NONE guifg=" . color7 . " ctermfg=7"
 execute "hi phpComparison ctermbg=NONE guifg=" . color7 . " ctermfg=7"
 execute "hi phpParent ctermbg=NONE guifg=" . color7 . " ctermfg=7"
+
 execute "hi cOperator ctermbg=NONE guifg=" . color6 . " ctermfg=6"
 execute "hi cPreCondit ctermbg=NONE guifg=" . color5 . " ctermfg=5"
+
 execute "hi SignifySignAdd ctermbg=NONE guifg=" . color2 . " ctermfg=2"
 execute "hi SignifySignChange ctermbg=NONE guifg=" . color4 . " ctermfg=4"
 execute "hi SignifySignDelete ctermbg=NONE guifg=" . color1 . " ctermfg=1"
+
 execute "hi NERDTreeDirSlash ctermbg=NONE guifg=" . color4 . " ctermfg=4"
 execute "hi NERDTreeExecFile ctermbg=NONE guifg=" . color7 . " ctermfg=7"
+
 execute "hi ALEErrorSign ctermbg=NONE guifg=" . color1 . " ctermfg=1"
 execute "hi ALEWarningSign ctermbg=NONE guifg=" . color3 . " ctermfg=3"
 execute "hi ALEError ctermbg=NONE guifg=" . color1 . " ctermfg=1"
 execute "hi ALEWarning ctermbg=NONE guifg=" . color3 . " ctermfg=3"
 
-" Plugins 
 let g:limelight_conceal_ctermfg=8
 let g:limelight_conceal_guifg=color8
+
+" Test
+  set cursorline
+  execute "highlight LineNr gui=italic guifg=" . color1 .  " guibg=" . color0
+  execute "highlight cursorline gui=bold guifg=" . color4 . " guibg=" . color0
+  execute "highlight CursorLineNr gui=bold guifg=" . color0 . " guibg=" . color6
+  execute "highlight Visual gui=Bold guifg=" . color6 . " guibg=" . color7
+  execute "highlight airline_tab gui=bold"
+
