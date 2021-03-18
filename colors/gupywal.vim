@@ -1,6 +1,7 @@
 " wal.vim -- Vim color scheme.
 " Original Author: Dylan Araps
     " Updated By: Brandon Shockley
+        " Updated Again By: mtoohey31
 " Webpage: httpg://github.com/dylanaraps/wal
 " Description: A colorscheme that uses your terminal colors, made to work with 'wal'.
 
