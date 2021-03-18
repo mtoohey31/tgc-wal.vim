@@ -16,7 +16,7 @@ hi clear
 set background=dark
 
 if exists('syntax_on')
-syntax reset
+    syntax reset
 endif
 
 " Colorscheme name
@@ -56,8 +56,9 @@ execute "hi VertSplit guibg=" . color8 . " ctermbg=8 guifg=" . color0 . " ctermf
 execute "hi Title ctermbg=NONE guifg=" . color4 . " ctermfg=4"
 
 execute "hi CursorLine guibg=" . color2 . " ctermbg=2 guifg=" . color0 . " ctermfg=0"
-execute "hi LineNr ctermbg=NONE guifg=" . color8 . " ctermfg=8"
+" execute "hi clear CursorLine"
 execute "hi CursorLineNr ctermbg=NONE guifg=" . color8 . " ctermfg=8"
+" execute "hi clear LineNr"
 
 execute "hi helpLeadBlank ctermbg=NONE guifg=" . color7 . " ctermfg=7"
 execute "hi helpNormal ctermbg=NONE guifg=" . color7 . " ctermfg=7"
@@ -80,7 +81,8 @@ execute "hi Search guibg=" . color3 . " ctermbg=3 guifg=" . color0 . " ctermfg=0
 execute "hi Directory ctermbg=NONE guifg=" . color4 . " ctermfg=4"
 execute "hi MatchParen guibg=" . color1 . " ctermbg=1 guifg=" . color8 . " ctermfg=8"
 execute "hi ColorColumn guibg=" . color4 . " ctermbg=4 guifg=" . color0 . " ctermfg=0"
-execute "hi signColumn ctermbg=NONE guifg=" . color4 . " ctermfg=4"
+execute "hi SignColumn ctermbg=NONE guifg=" . color4 . " ctermfg=4"
+execute "hi clear SignColumn"
 execute "hi ErrorMsg ctermbg=NONE guifg=" . color8 . " ctermfg=8"
 execute "hi ModeMsg ctermbg=NONE guifg=" . color2 . " ctermfg=2"
 execute "hi MoreMsg ctermbg=NONE guifg=" . color2 . " ctermfg=2"
@@ -220,11 +222,6 @@ execute "hi ALEWarning ctermbg=NONE guifg=" . color3 . " ctermfg=3"
 let g:limelight_conceal_ctermfg=8
 let g:limelight_conceal_guifg=color8
 
-" Test
-  set cursorline
-  execute "highlight LineNr gui=italic guifg=" . color1 .  " guibg=" . color0
-  execute "highlight cursorline gui=bold guifg=" . color4 . " guibg=" . color0
-  execute "highlight CursorLineNr gui=bold guifg=" . color0 . " guibg=" . color6
-  execute "highlight Visual gui=Bold guifg=" . color6 . " guibg=" . color7
-  execute "highlight airline_tab gui=bold"
-
+execute "highlight! link LineNr Comment"
+execute "highlight default link CursorLineNR CommentString"
+execute "highlight Visual guifg=" . foreground . " guibg=" . background
