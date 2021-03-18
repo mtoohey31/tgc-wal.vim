@@ -1,17 +1,7 @@
 " wal.vim -- Vim color scheme.
 " Original Author: Dylan Araps
-    " Updated By: Brandon Shockley
-        " Updated Again By: mtoohey31
-" Webpage: httpg://github.com/dylanaraps/wal
-" Description: A colorscheme that uses your terminal colors, made to work with 'wal'.
-
-" This update allows wal.vim to work with termguicolors. 
-
-" TODO:
-    " - [ ] Test on other terminals 
-    " - [ ] Test without termguicolors
-    " - [ ] Setup Plugins where possible
-    " - [ ] Comment and clean up script
+" Updated By: Brandon Shockley
+" Updated Again By: mtoohey31
 
 hi clear
 set background=dark
@@ -21,11 +11,9 @@ if exists('syntax_on')
 endif
 
 " Colorscheme name
-let g:colors_name = 'gupywal'
+let g:colors_name = 'tgc_wal'
 
 source $HOME/.cache/wal/colors-wal.vim
-
-" Do I need to set guixx=NONE ?
 
 execute "hi Normal ctermbg=NONE guifg=" . color7 ." ctermfg=7"
 execute "hi NonText ctermbg=NONE guifg=" . color0 . " ctermfg=0"
