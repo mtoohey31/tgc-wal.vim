@@ -68,7 +68,7 @@ execute "hi DiffText ctermbg=NONE guifg=" . color4 . " ctermfg=4"
 execute "hi IncSearch guibg=" . color3 . " ctermbg=3 guifg=" . color0 . " ctermfg=0"
 execute "hi Search guibg=" . color3 . " ctermbg=3 guifg=" . color0 . " ctermfg=0"
 execute "hi Directory ctermbg=NONE guifg=" . color4 . " ctermfg=4"
-execute "hi MatchParen guibg=" . color1 . " ctermbg=1 guifg=" . color8 . " ctermfg=8"
+execute "hi MatchParen guibg=" . background . " ctermbg=NONE guifg=NONE ctermfg=NONE"
 execute "hi ColorColumn guibg=" . color4 . " ctermbg=4 guifg=" . color0 . " ctermfg=0"
 execute "hi SignColumn ctermbg=NONE guifg=" . color4 . " ctermfg=4"
 execute "hi clear SignColumn"
@@ -207,6 +207,13 @@ execute "hi ALEErrorSign ctermbg=NONE guifg=" . color1 . " ctermfg=1"
 execute "hi ALEWarningSign ctermbg=NONE guifg=" . color3 . " ctermfg=3"
 execute "hi ALEError ctermbg=NONE guifg=" . color1 . " ctermfg=1"
 execute "hi ALEWarning ctermbg=NONE guifg=" . color3 . " ctermfg=3"
+
+execute "hi EasyMotionTarget ctermbg=NONE guifg=" . color6 . " ctermfg=6"
+execute "hi EasyMotionShade ctermbg=NONE guifg=" . color1 . " ctermfg=1"
+execute "hi EasyMotionTarget2First ctermbg=NONE guifg=" . color7 . " ctermfg=7"
+execute "hi EasyMotionTarget2Second ctermbg=NONE guifg=" . color7 . " ctermfg=7"
+execute "hi link EasyMotionMoveHL Search"
+execute "hi link EasyMotionIncSearch Search"
 
 let g:limelight_conceal_ctermfg=8
 let g:limelight_conceal_guifg=color8
