@@ -209,7 +209,7 @@ execute "hi ALEError ctermbg=NONE guifg=" . color1 . " ctermfg=1"
 execute "hi ALEWarning ctermbg=NONE guifg=" . color3 . " ctermfg=3"
 
 execute "hi EasyMotionTarget ctermbg=NONE guifg=" . color6 . " ctermfg=6"
-execute "hi EasyMotionShade ctermbg=NONE guifg=" . color1 . " ctermfg=1"
+execute "hi EasyMotionShade ctermbg=NONE guifg=" . color0 . " ctermfg=0"
 execute "hi EasyMotionTarget2First ctermbg=NONE guifg=" . color7 . " ctermfg=7"
 execute "hi EasyMotionTarget2Second ctermbg=NONE guifg=" . color7 . " ctermfg=7"
 execute "hi link EasyMotionMoveHL Search"
