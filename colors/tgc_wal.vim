@@ -19,7 +19,7 @@ execute "hi Normal ctermbg=NONE guifg=" . color7 ." ctermfg=7"
 execute "hi NonText ctermbg=NONE guifg=" . color0 . " ctermfg=0"
 execute "hi Comment ctermbg=NONE guifg=" . color8 . " ctermfg=8"
 
-hi Conceal ctermbg=NONE
+execute "hi Conceal guibg=NONE ctermbg=NONE guifg=" . color1 . " ctermfg=1"
 execute "hi Constant ctermbg=NONE guifg=" . color3 . "ctermfg=3"
 execute "hi Error guibg=" . color1 . " ctermbg=1 guifg=" . color7 . " ctermfg=7"
 execute "hi Identifier ctermbg=NONE guifg=" . color1 . " ctermfg=1 gui=BOLD cterm=BOLD"
