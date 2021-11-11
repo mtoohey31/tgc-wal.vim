@@ -63,6 +63,11 @@ execute "hi DiffAdd ctermbg=NONE guifg=" . color2 . " ctermfg=2"
 execute "hi DiffChange ctermbg=NONE guifg=" . color8 . " ctermfg=8"
 execute "hi DiffDelete ctermbg=NONE guifg=" . color1 . " ctermfg=1"
 execute "hi DiffText ctermbg=NONE guifg=" . color4 . " ctermfg=4"
+
+execute "hi GitSignsAdd ctermbg=NONE guifg=" . color2 . " ctermfg=2"
+execute "hi GitSignsChange ctermbg=NONE guifg=" . color8 . " ctermfg=8"
+execute "hi GitSignsDelete ctermbg=NONE guifg=" . color1 . " ctermfg=1"
+
 execute "hi IncSearch guibg=" . color3 . " ctermbg=3 guifg=" . color0 . " ctermfg=0"
 execute "hi Search guibg=" . color3 . " ctermbg=3 guifg=" . color0 . " ctermfg=0"
 execute "hi Directory ctermbg=NONE guifg=" . color4 . " ctermfg=4"
@@ -108,11 +113,11 @@ execute "hi EasyMotionTarget ctermbg=NONE guifg=" . color6 . " ctermfg=6"
 execute "hi EasyMotionShade ctermbg=NONE guifg=" . color0 . " ctermfg=0"
 execute "hi EasyMotionTarget2First ctermbg=NONE guifg=" . color7 . " ctermfg=7"
 execute "hi EasyMotionTarget2Second ctermbg=NONE guifg=" . color7 . " ctermfg=7"
-execute "hi link EasyMotionMoveHL Search"
-execute "hi link EasyMotionIncSearch Search"
+hi link EasyMotionMoveHL Search
+hi link EasyMotionIncSearch Search
 
-execute "highlight! link LineNr Comment"
-execute "highlight default link CursorLineNR CommentString"
+highlight! link LineNr Comment
+highlight default link CursorLineNR CommentString
 
 execute "hi LspDiagnosticsDefaultError ctermbg=NONE guifg=" . color1 . " ctermfg=1"
 execute "hi LspDiagnosticsDefaultWarning ctermbg=NONE guifg=" . color3 . " ctermfg=3"
