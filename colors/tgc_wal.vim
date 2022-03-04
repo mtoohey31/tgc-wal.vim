@@ -36,8 +36,8 @@ execute "hi Underlined ctermbg=NONE guifg=" . color1 . " ctermfg=1 gui=underline
 execute "hi StatusLine guibg=" . color7 . " ctermbg=7 guifg=" . color0 . " ctermfg=0"
 execute "hi StatusLineNC guibg=" . color8 . " ctermbg=8 guifg=" . color0 . " ctermfg=0"
 
-execute "hi TabLine ctermbg=NONE guifg=" . color8 . " ctermfg=8"
-execute "hi TabLineFill ctermbg=NONE guifg=" . color8 . " ctermfg=8"
+execute "hi TabLine ctermbg=NONE guifg=" . color7 . " ctermfg=7"
+execute "hi TabLineFill ctermbg=NONE guifg=" . color0 . " ctermfg=0"
 execute "hi TabLineSel guibg=" . color4 . " ctermbg=4 guifg=" . color0 . " ctermfg=0"
 
 execute "hi TermCursorNC guibg=" . color3 . " ctermbg=3 guifg=" . color0 . " ctermfg=0"
