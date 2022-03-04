@@ -1,4 +1,4 @@
-# tgc_wal.vim
+# tgc-wal.vim
 
 [![MIT licensed](https://img.shields.io/badge/license-MIT-blue.svg)](./LICENSE.md)
 
@@ -11,9 +11,17 @@ If you're using [vim-plug](https://github.com/junegunn/vim-plug):
 ```vim
 call plug#begin()
 
-Plug 'mtoohey31/tgc_wal.vim'
+Plug 'mtoohey31/tgc-wal.vim'
 
 call plug#end()
 
 colorscheme tgc_wal
+```
+
+Or, for [packer.nvim](https://github.com/wbthomason/packer.nvim):
+
+```lua
+use({ "mtoohey31/tgc-wal.vim", config = function()
+    vim.cmd("colorscheme tgc_wal")
+end })
 ```
